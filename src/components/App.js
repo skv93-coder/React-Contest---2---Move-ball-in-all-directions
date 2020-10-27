@@ -6,6 +6,7 @@ const App = () => {
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
   const [ballPosition, setBallPosition] = useState({
+    position: "absolute",
     left: "0px",
     top: "0px"
   });
@@ -57,7 +58,7 @@ const App = () => {
         Reset
       </button>
       {renderBall ? (
-        <div className="ball"></div>
+        <div className="ball" style={ballPosition}></div>
       ) : (
         <button onClick={start} className="startt">
           start
