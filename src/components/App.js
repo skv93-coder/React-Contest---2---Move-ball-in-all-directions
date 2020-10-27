@@ -21,26 +21,25 @@ const App = () => {
       setX(x + 5);
       let copyBall = { ...ballPosition };
       copyBall.left = x + 5 + "px";
-      console.log(copyBall);
+      //   console.log(copyBall);
       setBallPosition(copyBall);
     } else if (ev.key === "ArrowRight") {
       setX(x - 5);
       let copyBall = { ...ballPosition };
       copyBall.left = x - 5 + "px";
-      console.log(copyBall);
+      //  console.log(copyBall);
       setBallPosition(copyBall);
     } else if (ev.key === "ArrowUp") {
       setY(y + 5);
       let copyBall = { ...ballPosition };
       copyBall.top = y + 5 + "px";
-      console.log(copyBall, ev.key);
+      //console.log(copyBall, ev.key);
       setBallPosition(copyBall);
     } else if (ev.key === "ArrowDown") {
       setY(y - 5);
       let copyBall = { ...ballPosition };
       copyBall.top = y - 5 + "px";
 
-      console.log(copyBall);
       setBallPosition(copyBall);
     }
   };
