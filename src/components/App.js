@@ -7,7 +7,8 @@ const App = () => {
   const [y, setY] = useState(0);
   const [ballPosition, setBallPosition] = useState({
     left: "0px",
-    top: "0px"
+    top: "0px",
+    position: "fixed"
   });
   const reset = () => {
     setRenderBall(false);
@@ -27,6 +28,7 @@ const App = () => {
       let copyBall = { ...ballPosition };
       copyBall.left = x - 5 + "px";
       console.log(copyBall);
+      setBallPosition(copyBall);
     } else if (ev.key === "ArrowUp") {
       setY(y + 5);
       let copyBall = { ...ballPosition };
@@ -36,8 +38,8 @@ const App = () => {
     } else if (ev.key === "ArrowDown") {
       setY(y - 5);
       let copyBall = { ...ballPosition };
-      ballPosition.top = y - 5;
-      ballPosition.top += "px";
+      copyBall.top = y - 5 + "px";
+
       console.log(copyBall);
       setBallPosition(copyBall);
     }
