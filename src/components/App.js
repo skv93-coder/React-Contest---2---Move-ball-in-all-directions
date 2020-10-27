@@ -7,8 +7,7 @@ const App = () => {
   const [y, setY] = useState(0);
   const [ballPosition, setBallPosition] = useState({
     left: "0px",
-    top: "0px",
-    position: "fixed"
+    top: "0px"
   });
   const reset = () => {
     setRenderBall(false);
